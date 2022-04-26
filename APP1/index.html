@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>ReactJs</title>
 </head>
 <body>
     <div id="root"></div>
@@ -13,8 +13,8 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-
-        function MeuComponente(){
+// function componente de js que retorna js x renderizado pelo react DOM
+      /*  function MeuComponente(){
             
             var nome = "React"
             var apelido = "Js"
@@ -27,7 +27,40 @@
             )
         }
         const root = document.getElementById('root');
-        ReactDOM.render(<MeuComponente/>,root);
+        ReactDOM.render(<MeuComponente/>,root);*/
+
+        class Meu_outro_CompoA extends React.Component{
+            render(){
+                return(
+                <div>
+                    <h3>CompA</h3>
+                </div>
+                )
+            }
+        }
+        class Meu_outro_CompoB extends React.Component{
+            render(){
+                return(
+                <div>
+                    <h3>CompB</h3>
+                </div>
+                ) 
+            }
+        }
+        class Meu_Componete extends React.Component{
+            render(){
+                return(
+                <div>
+                 <Meu_outro_CompoA/>
+                 <hr/>
+                 <Meu_outro_CompoB/>    
+              </div>
+            )
+          }
+        }
+        const roots = document.getElementById('root');
+        ReactDOM.render(<Meu_Componete/>,roots);
     </script>
+    
 </body>
 </html>
