@@ -13,6 +13,20 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
+
+        function MeuComponente(){
+            
+            var Nome = "Regina"
+            var apelido = "Eyaala";
+            return(
+                <div>
+                <h1>Olá! como vês o react?</h1>   
+                <p>O nome da minha Namorda é:
+                    nome,apelido</p> 
+                </div>
+            )
+
+        }
         const root = document.getElementById('root');
         let nome = "Lucrécio Barnabe";
         ReactDOM.render(<h3>O meu Nome é {nome}</h3>,root);
