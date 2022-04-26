@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
-    <title>ReactJs</title>
+    <title>React Basico</title>
 </head>
 <body>
     <div id="root"></div>
@@ -27,7 +27,7 @@
             )
         }
         const root = document.getElementById('root');
-        ReactDOM.render(<MeuComponente/>,root);*/
+        ReactDOM.render(<MeuComponente/>,root);
 
         class Meu_outro_CompoA extends React.Component{
             render(){
@@ -60,6 +60,30 @@
         }
         const roots = document.getElementById('root');
         ReactDOM.render(<Meu_Componete/>,roots);
+        */
+// Os componentes devem começar sempre com letras capital para se diferenciar das tags html
+        function Comp_A(props){
+            return(
+                <div>
+                    <p>Nome: {props.nome1}</p>
+                </div>
+            )
+        }
+
+        function App(){
+            return(
+                <div>
+                    <Comp_A nome1="Lucrécio"/>
+                    <Comp_A nome1="Regina"/>
+                    <Comp_A nome1="Jonilso"/>
+                    <Comp_A nome1="Lucia"/>
+                    <Comp_A nome1="Pedro e Luzolo"/>
+                </div>
+            )
+        }
+
+        const root = document.getElementById('root');
+        ReactDOM.render(<App/>,root);
     </script>
     
 </body>
