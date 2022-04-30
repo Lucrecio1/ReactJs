@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Time</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   <script type="text/babel">
+       // apresentar um time
+       function tempo(){
+           //JSX a apresentar
+           // {new Date().toLocaleTimeString()} função que pega a hora, time em formato de esting
+           const conteudo = (
+               <div>
+               <h3>Tempo atual</h3>
+               <p>estamos na seguinte hora: {new Date().toLocaleTimeString()}</p> 
+               </div>
+           )
+           // incluir o ReactDOM
+           React.DOM.render(
+               conteudo,
+               document.getElementById('root')
+           )
+       }
+       tempo()
+   </script>
+</body>
+</html>
