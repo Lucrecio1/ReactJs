@@ -8,6 +8,7 @@
     <style>
         .cor_texto{
             color: red;
+            
         }
     </style>
 </head>
@@ -21,9 +22,14 @@
  <script type="text/babel">
   class App extends React.Component{
       render(){
+          const estilo={
+              color: "blue",
+              backgroundColor: "yellow",
+              padding: "20px"}
           return(
               <div>
                 <p className="cor_texto">Lucrecio</p>  
+                <p style={estilo}>Lucrecio</p>  
               </div>
           )
       }
