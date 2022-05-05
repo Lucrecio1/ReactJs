@@ -17,24 +17,33 @@
           constructor(){
               super()
               this.state={
-                  nome1: "Lucrecio",
-                  nome2: "Daniel",
-                  nome3: "Barnabe"
+                  nome1: "Adriel",
+                  nome2: "Regina",
+                  nome3: "Lucrécio"
 
               }
+              this.nes = this.nes.bind(this)
               this.nea = this.nea.bind(this)
-              this.nea = this.nes.bind(this)
-              this.nea = this.nava.bind(this)
+              this.nava = this.nava.bind(this)
+          }
+          nes(){
+              this.setState({nome1: "Adrisleny"})
+          }
+          nea(){
+              this.setState({nome2: "Eyala Barnabé"})
+          }
+          nava(){
+              this.setState({nome3: "Daniel"})
           }
                 render(){
                     return(
                         <div>
                            <p>Nome: {this.state.nome1}</p>
-                           <button onClique={this.nes}>Clique</button>
+                           <button onClick={this.nes}>Clique</button>
                            <p>Nome: {this.state.nome2}</p>
-                           <button onClique={this.nea}>Clique</button>
+                           <button onClick={this.nea}>Clique</button>
                            <p>Nome: {this.state.nome3}</p>
-                           <button onClique={this.nava}>Clique</button>
+                           <button onClick={this.nava}>Clique</button>
                         </div>
                     )
                 }
