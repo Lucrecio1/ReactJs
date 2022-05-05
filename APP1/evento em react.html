@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Document</title>
+    <title>evento no ReactJs</title>
 </head>
 <body>
     <div id="root"></div>
@@ -21,11 +21,13 @@
                this.state= {
                    nome: "Lucrecio"
                }
+               // usado para que o evento funcione
                this.cmd_clique = this.cmd_clique.bind(this)
             }
             //---------evento clique-------
             cmd_clique(){
                 this.setState({nome: "Barnabe"})
+                console.log("React Js esta On")
             }
             render(){
                 return(
