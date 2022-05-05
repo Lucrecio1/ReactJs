@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Desafio</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   
+   <script type="text/babel">
+      class App extends React.Component{
+          constructor(){
+              super()
+              this.state={
+                  nome1: "Lucrecio",
+                  nome2: "Daniel",
+                  nome3: "Barnabe"
+
+              }
+              this.nea = this.nea.bind(this)
+              this.nea = this.nes.bind(this)
+              this.nea = this.nava.bind(this)
+          }
+                render(){
+                    return(
+                        <div>
+                           <p>Nome: {this.state.nome1}</p>
+                           <button onClique={this.nes}>Clique</button>
+                           <p>Nome: {this.state.nome2}</p>
+                           <button onClique={this.nea}>Clique</button>
+                           <p>Nome: {this.state.nome3}</p>
+                           <button onClique={this.nava}>Clique</button>
+                        </div>
+                    )
+                }
+      }
+           ReactDOM.render(
+               <App/>,
+               document.getElementById('root')
+           )
+       
+    </script>
+</body>
+</html>
