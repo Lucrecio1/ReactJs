@@ -14,9 +14,28 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
    <script type="text/babel">
        // diferença entre props e state
-
+      
+       class App extends React.Component{ 
+           
+        constructor(){
+           super()
+           this.state={
+                   nome: "Lucrecio"
+               }
+       }
+          render(){
+            return(
+                <div>
+                <p>Nome: {this.state.nome}</p>
+                <p>Idade: {this.props.idade}</p>
+                </div>
+            )
+        } 
+       }
+        
        ReactDOM.render(
-           <App/>,document.getElementById('root')
+           // idade é elemento da propos
+           <App idade="24"/>,document.getElementById('root')
        )
    </script>
 </body>
