@@ -17,20 +17,21 @@
           //--------------------contructor----------
             constructor(){
                super()
+
                this.state= {
                    nome: "Lucrecio"
                }
-               this.cmd_clique = this.Component.bind(this)
+               this.cmd_clique = this.cmd_clique.bind(this)
             }
             //---------evento clique-------
             cmd_clique(){
-                this.nome= "Barnabe"
+                this.setState({nome: "Barnabe"})
             }
             render(){
                 return(
                     <div>
-                        <p>Nome:</p>
-                        <button>Clique</button>
+                        <p>Nome: {this.state.nome}</p>
+                        <button onClick={this.cmd_clique}>Clique</button>
                     </div>
                 )
             }
