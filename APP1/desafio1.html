@@ -14,18 +14,22 @@
    
    <script type="text/babel">
        class Compone extends React.Component{
-            constructor(){
-              super()
+            constructor(props){
+              super(props)
               this.state={
-                  
+                   nome: "Lucrecio"
               }
               // bindmg definição da relação de um bot
+              this.este_bt = this.este_bt.bind(this)
+          }
+          este_bt(){
+              this.setState({nome:"Barnabe"})
           }
           render(){
                   return(
                       <div>
-                         <p>Nome: {}</p>
-                         <button>Clique</button>
+                         <p>Nome: {this.state.nome}</p>
+                         <button onClick={this.este_bt}>Clique</button>
                       </div>
                   )
               }
@@ -38,9 +42,9 @@
                         <div>
                             <h3>Exercicio</h3>
                             <hr/>
-                          <Compone/>
-                          <Compone/>
-                          <Compone/>
+                          <Compone nome_i = "Lucrécio" nome_f = "Barnabé"/>
+                          <Compone  nome_i = "Regina" nome_f = "Eyala"/>
+                          <Compone nome_i = "Valdmira" nome_f = "Daniela"/>
                         </div>
                     )
                 }
