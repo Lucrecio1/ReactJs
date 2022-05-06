@@ -13,37 +13,36 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
    
    <script type="text/babel">
-      class App extends React.Component{
-          constructor(){
+       class Compone extends React.Component{
+            constructor(){
               super()
               this.state={
-                  nome1: "Adriel",
-                  nome2: "Regina",
-                  nome3: "Lucrécio"
-
+                  
               }
-              this.nes = this.nes.bind(this)
-              this.nea = this.nea.bind(this)
-              this.nava = this.nava.bind(this)
+              // bindmg definição da relação de um bot
+             
           }
-          nes(){
-              this.setState({nome1: "Adrisleny"})
-          }
-          nea(){
-              this.setState({nome2: "Eyala Barnabé"})
-          }
-          nava(){
-              this.setState({nome3: "Daniel"})
-          }
+          render(){
+                  return(
+                      <div>
+                         Compone
+                      </div>
+                  )
+              }
+       }
+
+       //-----------------------------------
+      class App extends React.Component{
+          
+            
                 render(){
                     return(
                         <div>
-                           <p>Nome: {this.state.nome1}</p>
-                           <button onClick={this.nes}>Clique</button>
-                           <p>Nome: {this.state.nome2}</p>
-                           <button onClick={this.nea}>Clique</button>
+                            <h3>Exercicio</h3>
+                            <hr/>
                            <p>Nome: {this.state.nome3}</p>
                            <button onClick={this.nava}>Clique</button>
+
                         </div>
                     )
                 }
