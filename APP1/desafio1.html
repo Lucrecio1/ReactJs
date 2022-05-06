@@ -17,13 +17,13 @@
             constructor(props){
               super(props)
               this.state={
-                   nome: "Lucrecio"
+                   nome: this.props.nome_i
               }
               // bindmg definição da relação de um bot
               this.este_bt = this.este_bt.bind(this)
           }
           este_bt(){
-              this.setState({nome:"Barnabe"})
+              this.setState({nome: this.props.nome_f})
           }
           render(){
                   return(
@@ -34,7 +34,6 @@
                   )
               }
        }
-
        //-----------------------------------
       class App extends React.Component{
                 render(){
@@ -53,7 +52,6 @@
                <App/>,
                document.getElementById('root')
            )
-       
     </script>
 </body>
 </html>
